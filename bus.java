@@ -36,7 +36,7 @@ public class bus {
         }else {
             ID = String.valueOf(count); /// inisisalisasi ID dengan menggunakan nomor pendaftaran
         }
-        return ("2021" + ID); /// Return ID busTM dengan menambahkan tahun 
+        return ("2021_" + ID); /// Return ID busTM dengan menambahkan tahun 
     }
 
     //METHOD toString (meng-format nilai selain String ke String)

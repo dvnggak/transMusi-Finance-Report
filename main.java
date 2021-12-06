@@ -1,8 +1,18 @@
 package transMusiApp;
 
+import java.util.Scanner;
+
 
 public class main {
     public static void main(String[] args) {
+
+        Scanner in = new Scanner (System.in);
+        String nama ;
+        String asalJurusan ;
+        String tujuanJurusan ;
+        int jmlPenumpang ;
+        int jarakRute;
+
         //INSTANSIASI BUS
         bus Bus1 = new bus("BG 1111 XXX", "Devangga");  
         bus Bus2 = new bus("BG 2222 XXX", "Rinaldi");  
@@ -21,70 +31,120 @@ public class main {
         System.out.println("Jumlah Bus = " + bus.getBusCount());   
         System.out.println(); // UNTUK JARAK DEVANGGA (OPSIONAL)
 
+        // DAPATKAN DATA BANYAK PENUMPANG BUS 1 DARI USER
+        System.out.print("Masukan Data Jumlah Penumpang Bus 1 : ");
+        jmlPenumpang = in.nextInt();
+
         //INSTANSIASI PENUMPANG
             // UNTUK BUS 1
-        Penumpang Cust1 = new Penumpang("Budi", "Mergan", "Dinoyo");   
+                // LAKUKAN PERULANGAN SESUAI JUMLAH PENUMPANG
+        for (int i = 1; i <= jmlPenumpang ; i++) {
 
-        //PANGGIL METHOD PERJALANAN DARI CLASS BUS
-        Bus1.perjalanan(Cust1, 5); 
+                    System.out.print("Input Nama Penumpang ke-" + i + " Bus 1 :");
+                    nama = in.next();
+                    System.out.print("Input Asal Jurusan Penumpang ke-"+ i + " Bus 1 : ");
+                    asalJurusan = in.next();
+                    System.out.print("Input Tujuan Jurusan Penumpang ke-"+ i + " Bus 1 : ");
+                    tujuanJurusan = in.next();
+                    System.out.print("Jarak Perjalanan Bus 1 pada Rute " + tujuanJurusan + " : ");
+                    jarakRute = in.nextInt();
 
-        Cust1 = new Penumpang("Samsul", "Landungsari", "ALun-alun");
-        Bus1.perjalanan(Cust1, 7);
-        System.out.println();
+                    Penumpang Cust1 = new Penumpang(nama, asalJurusan, tujuanJurusan);   
+                    Bus1.perjalanan(Cust1, jarakRute ); 
+                    System.out.println();
+        }
 
+        // DAPATKAN DATA BANYAK PENUMPANG BUS 2 DARI USER
+        System.out.print("Masukan Data Jumlah Penumpang Bus 2 : ");
+        jmlPenumpang = in.nextInt();
+
+        //INSTANSIASI PENUMPANG
             // UNTUK BUS 2
-        Penumpang Cust2 = new Penumpang("Doni", "Bandulan", "Dinoyo");
-        Bus2.perjalanan(Cust2, 3);
+                // LAKUKAN PERULANGAN SESUAI JUMLAH PENUMPANG
+        for (int i = 1; i <= jmlPenumpang ; i++) {
 
-        Cust2 = new Penumpang("Dino", "Dinoyo", "ALun-alun");
-        Bus2.perjalanan(Cust2, 9);
+                    System.out.print("Input Nama Penumpang ke-" + i + " Bus 2 :");
+                    nama = in.next();
+                    System.out.print("Input Asal Jurusan Penumpang ke-"+ i + " Bus 2 : ");
+                    asalJurusan = in.next();
+                    System.out.print("Input Tujuan Jurusan Penumpang ke-"+ i + " Bus 2 : ");
+                    tujuanJurusan = in.next();
+                    System.out.print("Jarak Perjalanan Bus 2 pada Rute " + tujuanJurusan + " : ");
+                    jarakRute = in.nextInt();
 
-        Cust2 = new Penumpang("Reni", "Merjosari", "ALun-alun");
-        Bus2.perjalanan(Cust2, 2);
-        System.out.println();
+                    Penumpang Cust2 = new Penumpang(nama, asalJurusan, tujuanJurusan);   
+                    Bus2.perjalanan(Cust2, jarakRute ); 
+                    System.out.println();
+        }
 
+        // DAPATKAN DATA BANYAK PENUMPANG BUS 3 DARI USER
+        System.out.print("Masukan Data Jumlah Penumpang Bus 3 : ");
+        jmlPenumpang = in.nextInt();
+
+        //INSTANSIASI PENUMPANG
             // UNTUK BUS 3
-        Penumpang Cust3 = new Penumpang("Ani", "Merjosari", "Dinoyo");
-        Bus3.perjalanan(Cust3, 5);
+                // LAKUKAN PERULANGAN SESUAI JUMLAH PENUMPANG
+        for (int i = 1; i <= jmlPenumpang ; i++) {
 
-        Cust3 = new Penumpang("Rino", "Bandulan", "ALun-alun");
-        Bus3.perjalanan(Cust3, 1);
+                    System.out.print("Input Nama Penumpang ke-" + i + " Bus 3 :");
+                    nama = in.next();
+                    System.out.print("Input Asal Jurusan Penumpang ke-"+ i + " Bus 3 : ");
+                    asalJurusan = in.next();
+                    System.out.print("Input Tujuan Jurusan Penumpang ke-"+ i + " Bus 3 : ");
+                    tujuanJurusan = in.next();
+                    System.out.print("Jarak Perjalanan Bus 3 pada Rute " + tujuanJurusan + " : ");
+                    jarakRute = in.nextInt();
 
-        Cust3 = new Penumpang("Deni", "Landungsari", "Dinoyo");
-        Bus3.perjalanan(Cust3, 0);
+                    Penumpang Cust3 = new Penumpang(nama, asalJurusan, tujuanJurusan);   
+                    Bus3.perjalanan(Cust3, jarakRute ); 
+                    System.out.println();
+        }
 
-        Cust3 = new Penumpang("Boni", "Arjosari", "ALun-alun");
-        Bus3.perjalanan(Cust3, 13);
-        System.out.println();
+        // DAPATKAN DATA BANYAK PENUMPANG BUS 4 DARI USER
+        System.out.print("Masukan Data Jumlah Penumpang Bus 4 : ");
+        jmlPenumpang = in.nextInt();
 
-            //UNTUK BUS 4
-        Penumpang Cust4 = new Penumpang("Ani", "Merjosari", "Dinoyo");
-        Bus4.perjalanan(Cust4, 5);
+        //INSTANSIASI PENUMPANG
+            // UNTUK BUS 4
+                // LAKUKAN PERULANGAN SESUAI JUMLAH PENUMPANG
+        for (int i = 1; i <= jmlPenumpang ; i++) {
 
-        Cust4 = new Penumpang("Rino", "Bandulan", "ALun-alun");
-        Bus4.perjalanan(Cust4, 1);
+                    System.out.print("Input Nama Penumpang ke-" + i + " Bus 4 :");
+                    nama = in.next();
+                    System.out.print("Input Asal Jurusan Penumpang ke-"+ i + " Bus 4 : ");
+                    asalJurusan = in.next();
+                    System.out.print("Input Tujuan Jurusan Penumpang ke-"+ i + " Bus 4 : ");
+                    tujuanJurusan = in.next();
+                    System.out.print("Jarak Perjalanan Bus 4 pada Rute " + tujuanJurusan + " : ");
+                    jarakRute = in.nextInt();
 
-        Cust4 = new Penumpang("Deni", "Landungsari", "Dinoyo");
-        Bus4.perjalanan(Cust4, 0);
+                    Penumpang Cust4 = new Penumpang(nama, asalJurusan, tujuanJurusan);   
+                    Bus4.perjalanan(Cust4, jarakRute ); 
+                    System.out.println();
+        }
 
-        Cust4 = new Penumpang("Boni", "Arjosari", "ALun-alun");
-        Bus4.perjalanan(Cust4, 13);
-        System.out.println();
+        // DAPATKAN DATA BANYAK PENUMPANG BUS 5 DARI USER
+        System.out.print("Masukan Data Jumlah Penumpang Bus 5 : ");
+        jmlPenumpang = in.nextInt();
 
+        //INSTANSIASI PENUMPANG
+            // UNTUK BUS 5
+                // LAKUKAN PERULANGAN SESUAI JUMLAH PENUMPANG
+        for (int i = 1; i <= jmlPenumpang ; i++) {
 
-            //UNTUK BUS 5
-        Penumpang Cust5 = new Penumpang("Ani", "Merjosari", "Dinoyo");
-        Bus5.perjalanan(Cust5, 5);
+                    System.out.print("Input Nama Penumpang ke-" + i + " Bus 5 :");
+                    nama = in.next();
+                    System.out.print("Input Asal Jurusan Penumpang ke-"+ i + " Bus 5 : ");
+                    asalJurusan = in.next();
+                    System.out.print("Input Tujuan Jurusan Penumpang ke-"+ i + " Bus 5 : ");
+                    tujuanJurusan = in.next();
+                    System.out.print("Jarak Perjalanan Bus 5 pada Rute " + tujuanJurusan + " : ");
+                    jarakRute = in.nextInt();
 
-        Cust5 = new Penumpang("Rino", "Bandulan", "ALun-alun");
-        Bus5.perjalanan(Cust5, 1);
-
-        Cust5 = new Penumpang("Deni", "Landungsari", "Dinoyo");
-        Bus5.perjalanan(Cust5, 0);
-
-        Cust5 = new Penumpang("Boni", "Arjosari", "ALun-alun");
-        Bus5.perjalanan(Cust5, 13);
-        System.out.println();
+                    Penumpang Cust5 = new Penumpang(nama, asalJurusan, tujuanJurusan);   
+                    Bus5.perjalanan(Cust5, jarakRute ); 
+                    System.out.println();
+        }
         
         //CETAK DATA PENUMPANG PAKAI METHOD printDataPenumpang
         System.out.println("Data Penumpang Bus 1 : ");  
@@ -112,5 +172,6 @@ public class main {
 
         /// mencetak hasil pendapatan perusahaan dari tiap bus
         System.out.printf("Total Pendapatan Perushaan : %.2f \n", (Bus1.getJumlahPendapatan() + Bus2.getJumlahPendapatan() + Bus3.getJumlahPendapatan() + Bus3.getJumlahPendapatan() + Bus4.getJumlahPendapatan() + Bus5.getJumlahPendapatan()));  
+        in.close();
     }
 }
